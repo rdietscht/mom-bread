@@ -1,1 +1,12 @@
 @import 'tailwindcss';
+
+@theme {
+    --font-freckleface: "freckleface", "sans-serif";
+}
+
+@font-face {
+  font-family: 'freckleface'; /* Alias/Name of the font */
+  src: url('/FreckleFace-Regular.ttf'), format('ttf') ; /* Path to the font file */
+  font-weight: normal; /* Font weight */
+  font-style: normal; /* Font style */
+}
