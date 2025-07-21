@@ -8,6 +8,6 @@
 	let { children } = $props();
 </script>
 
-<main class="w-screen h-screen border-40 border-amber-700">
+<main class="w-screen h-screen border-40 border-amber-700 bg-amber-700">
 	{@render children()}
 </main>
