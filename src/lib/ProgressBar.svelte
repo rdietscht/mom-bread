@@ -20,7 +20,7 @@
     <div class="w-full h-full flex flex-col-reverse">
         {#if stepCount <= MAX_COUNT}
             {#each Array.from(Array(stepCount).keys()) as tick}
-                <div class={`w-full h-1/8 ${ tick + 1 <= currentStep ? 'bg-orange-200' : '' }`}>
+                <div class={`w-full h-1/8 ${ tick + 1 <= currentStep ? 'bg-orange-200 border-y-1 border-orange-200' : '' }`}>
                     <div class="border-1 w-2"></div>
                 </div>
             {/each}
