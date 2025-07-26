@@ -139,7 +139,7 @@
                         >Next</button>
                     </div>
                     <div class="w-2/5 h-20 px-2 py-1">
-                        <ProgressBar stepCount={8} currentStep={1} />
+                        <ProgressBar stepCount={8} currentStep={currentStep + 1} />
                     </div>
                 </div>
             </div>
