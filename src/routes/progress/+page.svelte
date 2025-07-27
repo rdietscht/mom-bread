@@ -1,5 +1,7 @@
 <script lang="ts">
-    import ProgressBar from '$lib/ProgressBar.svelte';
+    import { type BreadStep_T } from '$lib';
+    import BreadTimer from '$lib/BreadTimer.svelte';
+import ProgressBar from '$lib/ProgressBar.svelte';
 
     // TODO: Move these into a static file that gets fetched before rendering the page.
     const steps: BreadStep_T[] = [
@@ -125,7 +127,7 @@
         <div class={`${ showGUI ? 'max-h-100' : 'max-h-0'} h-fit overflow-clip transition-[max-height] bg-red-900 text-stone-50 flex flex-row`}>
 
             <!-- Navigational Buttons + Progress Bar (steps) -->
-            <div class="w-1/2 border-2">
+            <div class="w-1/2">
                 <h3 class="text-center text-lg">Progress</h3>
                 <div class="flex flex-row">
                     <div class="w-3/5 flex flex-row justify-evenly items-center">
@@ -145,9 +147,14 @@
             </div>
 
             <!-- Timers (if any) + "BreadBook" containing facts about the selected bread -->
-            <div class="flex flex-col w-1/2">
+            <div class="flex flex-col w-1/2 px-1">
                 <div>
                     <h3 class="text-lg">Timers</h3>
+                    <div class="text-sm">
+                        <!-- TODO: Change this to reactively render based on whether the
+                         current breadStep contains a timer included -->
+                        <BreadTimer duration={10} />
+                    </div>
                 </div>
                 <div>
                     <!-- TODO: Make this into cartoon of a book -->
