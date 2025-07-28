@@ -152,7 +152,7 @@ import ProgressBar from '$lib/ProgressBar.svelte';
                 <h3 class="text-lg">Timers</h3>
                 <div class="text-sm">
                     {#if steps[currentStep].timer}
-                        <BreadTimer duration={60} />
+                        <BreadTimer duration={steps[currentStep].timer as number} />
                     {:else}
                         <i class="text-xs">This step does not require a timer!</i>
                     {/if}
