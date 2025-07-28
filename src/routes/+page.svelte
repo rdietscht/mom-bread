@@ -29,7 +29,7 @@
 <!-- MAIN CONTENT AREA -->
 <div class="relative bg-amber-100 w-full h-full rounded-md font-freckleface">
     <aside class="text-red-900 p-2">
-        <h1 class="text-5xl">BreadWinner</h1>
+        <h1 class="text-5xl">BreadWinner (Demo)</h1>
         <p class="text-xl">Our bread-and-butter are loafs.</p>
     </aside>
 
@@ -39,8 +39,8 @@
     </div> TODO: TEST THIS WHEN YOU HAVE ACCESS TO XCODE ON A MAC -->
 
     <!-- Selection of utilities -->
-    <div class="border-2 rounded-sm absolute top-1/2 left-1/2 -translate-1/2 w-2/3">
-        <h1 class="text-center text-2xl py-1">What are you looking for?</h1>
+    <div class="border-8 border-red-900 rounded-sm absolute top-1/2 left-1/2 -translate-1/2 w-2/3">
+        <h1 class="text-center text-2xl text-red-900 py-1">What are you looking for?</h1>
         <div class="flex flex-col items-center py-2">
             <a
                 class="utility-button"
