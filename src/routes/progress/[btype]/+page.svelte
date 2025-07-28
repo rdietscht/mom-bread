@@ -2,12 +2,13 @@
     import { type BreadStep_T } from '$lib';
     import BreadTimer from '$lib/BreadTimer.svelte';
     import ProgressBar from '$lib/ProgressBar.svelte';
-    import type { PageProps } from '../$types';
+    import type { PageProps } from '../../$types';
 
     // Retrieve fetched page data.
-    let { data }: { data: { steps: BreadStep_T[] } } = $props();
+    let { data }: { data: { steps: BreadStep_T[], btype: string } } = $props();
 
     let steps: BreadStep_T[] = data.steps;
+    let btype: string = data.btype;
 
     // STATE
     let showGUI: boolean = $state(true);
@@ -48,8 +49,8 @@
 
 <main class="w-full h-full rounded-md bg-amber-100 font-freckleface">
 
-    <!-- For sandwich bread, display the steps and have timers available -->
-    <h1 class="text-4xl text-center text-red-900 py-4">Sandwich Bread</h1>
+    <!-- Display the name of the bread type -->
+    <h1 class="text-4xl text-center text-red-900 py-4">{btype[0].toUpperCase() + btype.slice(1)} Bread</h1>
 
     <!-- Carousel area for showing steps -->
     <div class="h-2/3">

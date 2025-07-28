@@ -1,4 +1,4 @@
-import type { PageLoad } from './$types';
+import type { PageLoad } from '../$types';
 import type { BreadStep_T } from '$lib';
 
 export const load: PageLoad = ({ params }) =>
@@ -6,7 +6,7 @@ export const load: PageLoad = ({ params }) =>
     // TODO: Add some logic here to use the params of the page route
     // to determine which steps to fetch.
 
-    // DEMO FOR POC
+    // DEMO FOR POC - TODO MOVE THIS TO A STATIC DATA FILE OF SOME KIND
     let data_steps: BreadStep_T[] =
     [
         {
@@ -75,6 +75,7 @@ export const load: PageLoad = ({ params }) =>
 
     // Return the fetched data to the page route.
     return {
-        steps: data_steps
+        steps: data_steps,
+        btype: (params as { btype: string }).btype
     };
 }

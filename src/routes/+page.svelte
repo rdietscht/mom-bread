@@ -42,9 +42,13 @@
     <div class="border-8 border-red-900 rounded-sm absolute top-1/2 left-1/2 -translate-1/2 w-2/3">
         <h1 class="text-center text-2xl text-red-900 py-1">What are you looking for?</h1>
         <div class="flex flex-col items-center py-2">
+
+            <!-- TODO: CHANGE THIS URL TO A PAGE THAT REROUTES YOU
+             TO A NEW SELECTION PAGE OR A RESUME SESSION PAGE IF THE
+             USER IS CURRENTLY TRACKING BREAD -->
             <a
                 class="utility-button"
-                href="/progress"
+                href="/progress/sandwich"
             >
                 Track Bread Progress
             </a>
