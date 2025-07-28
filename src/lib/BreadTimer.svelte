@@ -36,7 +36,7 @@
                 time_left = convertSecsToDigitalTime(0);
 
                 let ring: HTMLAudioElement = new Audio('/bell-ring.wav');
-                ring.volume = 0.4;
+                ring.volume = 0.8;
                 ring.play();
 
                 // Destroy the interval calling this function once it's finished.
