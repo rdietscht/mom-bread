@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import { computeFinalTime, convertSecsToDigitalTime, type DigitalTime_T } from '$lib';
+    import { computeFinalTime, convertSecsToDigitalTime, displayDT, type DigitalTime_T } from '$lib';
 
     // Duration of the timer in seconds.
     let { duration }: { duration: number } = $props(); 
@@ -36,7 +36,7 @@
                 time_left = convertSecsToDigitalTime(0);
 
                 let ring: HTMLAudioElement = new Audio('/bell-ring.wav');
-                ring.volume = 0.8;
+                ring.volume = 1.0;
                 ring.play();
 
                 // Destroy the interval calling this function once it's finished.
@@ -78,7 +78,7 @@
             the elapsed time specified by the duration prop is reached -->
             {#if final_time}
                 <i>Estimated to Finish: {final_time.toLocaleTimeString()}</i>
-                <h3 class="text-lg">{time_left.hrs}:{time_left.mins}:{time_left.secs}</h3>
+                <h3 class="text-lg">{displayDT(time_left)}</h3>
             {:else}
                 <button onclick={setupBreadTimer}>Begin Timer</button>
             {/if}

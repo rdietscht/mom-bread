@@ -17,6 +17,20 @@ export type DigitalTime_T =
 }
 
 /**
+ * Builds and yields a `string` in HH:MM:SS format.
+ * 
+ * @param time The time value to use.
+ * @returns A `string` value in HH:MM:SS format.
+ */
+export function displayDT(time: DigitalTime_T): string
+{
+    let hrs_f: string = time.hrs.toString().padStart(2, '0');
+    let mins_f: string = time.mins.toString().padStart(2, '0');
+    let secs_f: string = time.secs.toString().padStart(2, '0');
+    return `${hrs_f}:${mins_f}:${secs_f}`;
+}
+
+/**
  * Converts the given duration in seconds to the `DigitalTime_T` interface.
  * 
  * @param secs Number of seconds in the duration.

@@ -153,7 +153,7 @@ import ProgressBar from '$lib/ProgressBar.svelte';
                     <div class="text-sm">
                         <!-- TODO: Change this to reactively render based on whether the
                          current breadStep contains a timer included -->
-                        <BreadTimer duration={10} />
+                        <BreadTimer duration={60} />
                     </div>
                 </div>
                 <div>
