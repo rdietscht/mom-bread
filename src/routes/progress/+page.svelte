@@ -26,6 +26,7 @@ import ProgressBar from '$lib/ProgressBar.svelte';
             img: '/loading-dough.png',
             alt: 'loading bread icon',
             desc: 'Oh yeah it\'s that part that takes fuckin forever',
+            timer: 14400
         },
         {
             title: 'Shape Dough',
@@ -148,17 +149,13 @@ import ProgressBar from '$lib/ProgressBar.svelte';
 
             <!-- Timers (if any) + "BreadBook" containing facts about the selected bread -->
             <div class="flex flex-col w-1/2 px-1">
-                <div>
-                    <h3 class="text-lg">Timers</h3>
-                    <div class="text-sm">
-                        <!-- TODO: Change this to reactively render based on whether the
-                         current breadStep contains a timer included -->
+                <h3 class="text-lg">Timers</h3>
+                <div class="text-sm">
+                    {#if steps[currentStep].timer}
                         <BreadTimer duration={60} />
-                    </div>
-                </div>
-                <div>
-                    <!-- TODO: Make this into cartoon of a book -->
-                    <h3>BreadBook</h3>
+                    {:else}
+                        <i class="text-xs">This step does not require a timer!</i>
+                    {/if}
                 </div>
             </div>
 
