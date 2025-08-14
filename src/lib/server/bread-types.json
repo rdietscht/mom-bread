@@ -1,0 +1,58 @@
+{
+    "BREAD-TYPES": [
+        {
+            "TYPE": "sandwich",
+            "STEPS": [
+                {
+                    "title": "Make the Dough",
+                    "img": "/doughmaking.png",
+                    "alt": "cartoon of someone making dough",
+                    "desc": "Every bread type starts here. Making the dough requires careful kneading to provide a firm foundation for your starter. If you want to ensure a good texture for your bread, make sure you knead well!"
+                },
+                {
+                    "title": "Stretch-N-Fold",
+                    "img": "/loading-dough.png",
+                    "alt": "loading bread icon",
+                    "desc": "I honestly have no clue wtf this means. I think you gotta do some yoga or sumn while making bread"
+                },
+                {
+                    "title": "Bulk Ferment",
+                    "img": "/loading-dough.png",
+                    "alt": "loading bread icon",
+                    "desc": "Oh yeah it's that part that takes fuckin forever",
+                    "timer": 14400
+                },
+                {
+                    "title": "Shape Dough",
+                    "img": "/loading-dough.png",
+                    "alt": "loading bread icon",
+                    "desc": "It's gotta be like building a snowman right? But like instead of a friend you eat it when you're done and realize you wasted half your time of the week making food that is gonna be gone in less than 2 days"
+                },
+                {
+                    "title": "Second Rise",
+                    "img": "/loading-dough.png",
+                    "alt": "loading bread icon",
+                    "desc": "U gotta be fkn kidding me. ANOTHER WAIT?? Dude just go buy some bread at Wal-Mart or sumn this shit is taking forever and I'm hungry"
+                },
+                {
+                    "title": "Preheat Oven (400 degs.)",
+                    "img": "/loading-dough.png",
+                    "alt": "loading bread icon",
+                    "desc": "Time to burn that MF like the Terminator. I think this also requires some timing bc you want the inside to be the right texture so make sure to ask Gia/Mami how they typically do this part."
+                },
+                {
+                    "title": "Bake Bread (covered)",
+                    "img": "/loading-dough.png",
+                    "alt": "loading bread icon",
+                    "desc": "jesus this thing is complicated. how the hell did humanity even discover this shit without the wonders of technology? like how would you even realize you need to bake covered then uncovered..."
+                },
+                {
+                    "title": "Bake Bread (uncovered)",
+                    "img": "/loading-dough.png",
+                    "alt": "loading bread icon",
+                    "desc": ".. you dirty dog you..."
+                }
+            ]
+        }
+    ]
+}
