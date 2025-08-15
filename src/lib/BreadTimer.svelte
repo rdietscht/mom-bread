@@ -73,9 +73,6 @@
 
     <!-- Digital Clock showing remaining time -->
     <div class="w-2/3 text-xs text-center bg-red-950 mx-2 rounded-md">
-        <!-- TODO: Render a timer in HH:MM:SS format that gets updated each second
-            by displaying new Date instances after a timeout interval passes UNTIL
-            the elapsed time specified by the duration prop is reached -->
             {#if final_time}
                 <i>Estimated to Finish: {final_time.toLocaleTimeString()}</i>
                 <h3 class="text-lg">{displayDT(time_left)}</h3>
