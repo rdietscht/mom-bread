@@ -1,5 +1,5 @@
 {
-    "BREAD-TYPES": [
+    "breadtypes": [
         {
             "TYPE": "sandwich",
             "STEPS": [

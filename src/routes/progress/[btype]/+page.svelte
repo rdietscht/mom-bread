@@ -6,6 +6,7 @@
 
     // Retrieve fetched page data.
     let { data }: { data: { steps: BreadStep_T[], btype: string } } = $props();
+    console.log(data);
 
     let steps: BreadStep_T[] = data.steps;
     let btype: string = data.btype;
