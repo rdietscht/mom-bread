@@ -2,6 +2,7 @@
 
     // The max number of steps to render + the current step highlighted.
     let { stepCount, currentStep }: { stepCount: number, currentStep: number } = $props();
+    $inspect(stepCount);
 
     const MAX_COUNT: number = 8; // changes the maximum number of steps rendered
     const STEP_VALUE: number = MAX_COUNT / stepCount; // the value of each step, used to progress bar when stepCount > MAX_COUNT
@@ -26,6 +27,11 @@
             {/each}
         {:else}
             <!-- TODO: Create eight ticks that get filled out when the step value gets reached -->
+            {#each Array.from(Array(MAX_COUNT).keys()) as tick}
+                <div class={`w-full h-1/8 ${ tick + 1 <= currentStep * STEP_VALUE ? 'bg-orange-200 border-y-1 border-orange-200' : '' }`}>
+                    <div class="border-1 w-2"></div>
+                </div>
+            {/each}
         {/if}
     </div>
 </div>
