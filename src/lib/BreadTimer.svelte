@@ -5,10 +5,10 @@
     // Duration of the timer in seconds.
     let { duration }: { duration: number } = $props(); 
 
-    const MS_DURATION: number = duration * 1000; // for work with legacy functions
+    let MS_DURATION: number = $derived(duration * 1000); // for work with legacy functions
 
     let final_time: Date | undefined = $state(undefined);
-    let time_left: DigitalTime_T = $state(convertSecsToDigitalTime(duration));
+    let time_left: DigitalTime_T = $derived(convertSecsToDigitalTime(duration));
     let interval_id: any = $state(0); // used to preemptively cut a timer short
 
     // Used to configure timer settings and render state values.
@@ -27,9 +27,9 @@
         // console.log('updating time display...'); // DEBUGGING!
         let current_time: Date = new Date();
 
-        // EARLY EXIT - we have passed the finish time.
         if (final_time)
         {
+            // EARLY EXIT - we have passed the finish time.
             if (final_time.getTime() < current_time.getTime())
             {
                 console.log("time reached! alerting the user..."); // DEBUGGING!
@@ -47,7 +47,7 @@
                 // Update the displayed time by getting the difference
                 // between the current time and the final time.
                 let ms_diff: number = final_time.getTime() - current_time.getTime();
-                let raw_time = convertSecsToDigitalTime(ms_diff / 1000);
+                let raw_time: DigitalTime_T = convertSecsToDigitalTime(ms_diff / 1000);
                 raw_time.hrs = Math.round(raw_time.hrs);
                 raw_time.mins = Math.round(raw_time.mins);
                 raw_time.secs = Math.round(raw_time.secs);
