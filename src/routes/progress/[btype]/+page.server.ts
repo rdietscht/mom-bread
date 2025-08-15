@@ -5,15 +5,14 @@ import type { BreadStep_T } from '$lib';
 export const load: PageLoad = ({ params }) =>
 {
     // console.log(db["breadtypes"][0].STEPS);
+    let btype: string = (params as { btype: string }).btype;
 
-    // TODO: Add some logic here to use the params of the page route
-    // to determine which steps to fetch.
-
-    let data_steps: BreadStep_T[] = db["breadtypes"][0].STEPS;
+    // Retrieve the bread steps for the provided page route.
+    let data_steps: BreadStep_T[] = (db["breadtypes"].filter((breadinfo) => { if (breadinfo.TYPE == btype) { return breadinfo } }))[0].STEPS;
 
     // Return the fetched data to the page route.
     return {
         steps: data_steps,
-        btype: (params as { btype: string }).btype
+        btype: btype,
     };
 }
