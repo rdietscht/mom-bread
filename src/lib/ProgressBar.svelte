@@ -26,7 +26,6 @@
                 </div>
             {/each}
         {:else}
-            <!-- TODO: Create eight ticks that get filled out when the step value gets reached -->
             {#each Array.from(Array(MAX_COUNT).keys()) as tick}
                 <div class={`w-full h-1/8 ${ tick + 1 <= currentStep * STEP_VALUE ? 'bg-orange-200 border-y-1 border-orange-200' : '' }`}>
                     <div class="border-1 w-2"></div>
