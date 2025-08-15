@@ -7,50 +7,82 @@
                     "title": "Make the Dough",
                     "img": "/doughmaking.png",
                     "alt": "cartoon of someone making dough",
-                    "desc": "Every bread type starts here. Making the dough requires careful kneading to provide a firm foundation for your starter. If you want to ensure a good texture for your bread, make sure you knead well!"
+                    "desc": "Mix the starter, water, oil, and honey together. Mix these ingredients together and then add flour and salt. Once finished, cover the mix and let it rest for an hour.",
+                    "timer": 3600
                 },
                 {
-                    "title": "Stretch-N-Fold",
+                    "title": "Stretch-N-Fold (Set 1)",
                     "img": "/loading-dough.png",
                     "alt": "loading bread icon",
-                    "desc": "I honestly have no clue wtf this means. I think you gotta do some yoga or sumn while making bread"
+                    "desc": "Wet your hands before grabbing dough. Grab one side in a large bowl, then gently fold the dough over itself. Repeat this 3 times, rotating the bowl a quarter before folding. You'll need to do this roughly 4-6 times (recommended) spaced 30 minutes apart.",
+                    "timer": 1800
+                },
+                {
+                    "title": "Stretch-N-Fold (Set 2)",
+                    "img": "/loading-dough.png",
+                    "alt": "loading bread icon",
+                    "desc": "Wet your hands before grabbing dough. Grab one side in a large bowl, then gently fold the dough over itself. Repeat this 3 times, rotating the bowl a quarter before folding. You'll need to do this roughly 4-6 times (recommended) spaced 30 minutes apart.",
+                    "timer": 1800
+                },
+                {
+                    "title": "Stretch-N-Fold (Set 3)",
+                    "img": "/loading-dough.png",
+                    "alt": "loading bread icon",
+                    "desc": "Wet your hands before grabbing dough. Grab one side in a large bowl, then gently fold the dough over itself. Repeat this 3 times, rotating the bowl a quarter before folding. You'll need to do this roughly 4-6 times (recommended) spaced 30 minutes apart.",
+                    "timer": 1800
+                },
+                {
+                    "title": "Stretch-N-Fold (Set 4)",
+                    "img": "/loading-dough.png",
+                    "alt": "loading bread icon",
+                    "desc": "Wet your hands before grabbing dough. Grab one side in a large bowl, then gently fold the dough over itself. Repeat this 3 times, rotating the bowl a quarter before folding. You'll need to do this roughly 4-6 times (recommended) spaced 30 minutes apart.",
+                    "timer": 1800
                 },
                 {
                     "title": "Bulk Ferment",
                     "img": "/loading-dough.png",
                     "alt": "loading bread icon",
-                    "desc": "Oh yeah it's that part that takes fuckin forever",
+                    "desc": "Cover and rest the bowl for roughly 4-8 hours (minimum.) You can also leave it covered overnight.",
                     "timer": 14400
                 },
                 {
                     "title": "Shape Dough",
                     "img": "/loading-dough.png",
                     "alt": "loading bread icon",
-                    "desc": "It's gotta be like building a snowman right? But like instead of a friend you eat it when you're done and realize you wasted half your time of the week making food that is gonna be gone in less than 2 days"
+                    "desc": "Essentially, gently shape the dough into a ball shape. This helps to build surface tension that traps gases and creates a strong crust. This is accomplished by repeatedly rotating the dough and folding it towards it center. Once finished, place the dough in a greased loaf pan."
                 },
                 {
                     "title": "Second Rise",
                     "img": "/loading-dough.png",
                     "alt": "loading bread icon",
-                    "desc": "U gotta be fkn kidding me. ANOTHER WAIT?? Dude just go buy some bread at Wal-Mart or sumn this shit is taking forever and I'm hungry"
+                    "desc": "Cover the bread and let it rise for roughly 2 hours.",
+                    "timer": 7200
                 },
                 {
                     "title": "Preheat Oven (400 degs.)",
                     "img": "/loading-dough.png",
                     "alt": "loading bread icon",
-                    "desc": "Time to burn that MF like the Terminator. I think this also requires some timing bc you want the inside to be the right texture so make sure to ask Gia/Mami how they typically do this part."
+                    "desc": "You'll need to cover the dough before placing in the oven. The best way to do this is with a second loaf pan placed on top of the pan containing the dough."
                 },
                 {
-                    "title": "Bake Bread (covered)",
+                    "title": "Bake Bread, 400 degs. (covered)",
                     "img": "/loading-dough.png",
                     "alt": "loading bread icon",
-                    "desc": "jesus this thing is complicated. how the hell did humanity even discover this shit without the wonders of technology? like how would you even realize you need to bake covered then uncovered..."
+                    "desc": "Bake the bread for 30 minutes with the bread covered.",
+                    "timer": 1800
                 },
                 {
-                    "title": "Bake Bread (uncovered)",
+                    "title": "Bake Bread, 375 degs. (uncovered)",
                     "img": "/loading-dough.png",
                     "alt": "loading bread icon",
-                    "desc": ".. you dirty dog you..."
+                    "desc": "Remove the covering and lower the temperature inside the oven to 375 degrees Fahrenheit. Bake for another 15 minutes.",
+                    "timer": 1800
+                },
+                {
+                    "title": "Cool Bread",
+                    "img": "/loading-dough.png",
+                    "alt": "loading bread icon",
+                    "desc": "Remove the bread from the pan. Allow it to cool. Enjoy your beautiful bread!"
                 }
             ]
         }
