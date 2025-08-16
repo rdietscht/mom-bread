@@ -1,4 +1,38 @@
 <script lang="ts">
+    import Fa from "svelte-fa";
+    import { getCurrentType } from "$lib/session.svelte";
+    import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+    import { base } from "$app/paths";
+
+    let displayBreadOptions: boolean = $state(false); // displays a popup
+    let baseIndex: number = $state(0); // tracks carousel state
+
+    // UPDATE THIS WHENEVER A NEW BREAD TYPE IS ADDED.
+    const IMPLEMENTED_TYPES: string[] = [
+        'sandwich',
+        'sourdough',
+        'wheat',
+        'fruitcake',
+        'honeywheat'
+    ]
+
+    function updateBaseIndex(forward_flag: boolean)
+    {
+        // EARLY EXIT - Don't do anything if updating the baseIndex would lead to an OOB error.
+        if (forward_flag && baseIndex + 3 >= IMPLEMENTED_TYPES.length)
+        {
+            // console.warn('stepping out-of-bounds... ignoring button press'); // DEBUGGING!
+            return;
+        } else if (!forward_flag && baseIndex - 3 < 0)
+        {
+            // console.warn('stepping out-of-bounds... ignoring button press'); // DEBUGGING!
+            return;
+        } else
+        {
+            baseIndex = forward_flag ? baseIndex + 3 : baseIndex - 3;
+        }
+    }
+
     function testPush(e: Event)
     {
         console.log("TODO");
@@ -26,6 +60,17 @@
 
 </style>
 
+<!-- Used for rendering bread types to select from. -->
+{#snippet breadlink(type: string, img_url: string)}
+    <a
+        class="w-1/3 h-full m-auto my-2 border-2 rounded-full bg-amber-700/50 transition active:scale-115 active:bg-amber-400/40"
+        href="/progress/{type}"
+    >
+        <img src={img_url} alt="link to a bread progress tracker" />
+        <h1 class="relative -bottom-1 -left-1 bg-amber-950 w-fit px-1 rounded-md text-stone-50">{type.toUpperCase()}</h1>
+    </a>
+{/snippet}
+
 <!-- MAIN CONTENT AREA -->
 <div class="relative bg-amber-100 w-full h-full rounded-md font-freckleface">
     <aside class="text-red-900 p-2">
@@ -46,12 +91,23 @@
             <!-- TODO: CHANGE THIS URL TO A PAGE THAT REROUTES YOU
              TO A NEW SELECTION PAGE OR A RESUME SESSION PAGE IF THE
              USER IS CURRENTLY TRACKING BREAD -->
-            <a
-                class="utility-button"
-                href="/progress/sandwich"
-            >
-                Track Bread Progress
-            </a>
+            {#if getCurrentType()}
+                <!-- The user has saved session state -->
+                <a
+                    class="utility-button"
+                    href="/progress/sandwich"
+                >
+                    View Progress
+                </a>
+            {:else}
+                <button
+                    class="utility-button"
+                    onclick={() => { displayBreadOptions = true; }}
+                >
+                    Track Bread Progress
+                </button>
+            {/if}
+
             <a
                 class="utility-button"
                 href="/recipes"
@@ -66,5 +122,53 @@
             </a>
         </div>
     </div>
+
+    {#if displayBreadOptions}
+        <div class="fixed top-0 left-0 bg-stone-700/40 w-screen h-screen">
+            <div class="relative border-2 w-fit m-auto top-1/2 -translate-y-1/2 px-1 py-2 bg-stone-200 rounded-md">
+
+                <!-- EXIT POPUP BUTTON -->
+                <button
+                    class="absolute border-2 bg-red-200 -translate-y-full left-0 px-2 py-1 rounded-sm"
+                    onclick={() => { displayBreadOptions = false }}
+                >CANCEL</button>
+
+                <h2 class="text-lg">Which Bread type would you like to track?</h2>
+
+                <!-- Render bread type options in groups of 3 -->
+                {#if IMPLEMENTED_TYPES.length < 4}
+                <div class="flex flex-col">
+                    {#each IMPLEMENTED_TYPES as type}
+                        {@render breadlink(type, '/loading-dough.png')}
+                    {/each}
+                </div>
+                {:else}
+                    <div class="flex flex-row justify-center">
+                        <!-- Render a carousel for switching between displayed choices -->
+                        <button
+                            onclick={() => { updateBaseIndex(false) }}>
+                            <Fa
+                                icon={faCaretLeft}
+                                scale={1.5}
+                            />
+                        </button>
+                        <div class="flex flex-col">
+                            {#each [...Array.from(Array(3).keys())] as offset}
+                                {#if baseIndex + offset < IMPLEMENTED_TYPES.length}
+                                    {@render breadlink(IMPLEMENTED_TYPES[baseIndex + offset], '/loading-dough.png')}
+                                {/if}
+                            {/each}
+                        </div>
+                        <button onclick={() => { updateBaseIndex(true) }}>
+                            <Fa
+                                icon={faCaretRight}
+                                scale={1.5}
+                            />
+                        </button>
+                    </div>
+                {/if}
+            </div>
+        </div>
+    {/if}
 
 </div>
