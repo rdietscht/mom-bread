@@ -71,8 +71,9 @@
 <!-- MAIN CONTENT AREA -->
 <div class="relative bg-amber-100 w-full h-full rounded-md font-freckleface">
     <aside class="text-red-900 p-2">
-        <h1 class="text-5xl">BreadWinner (Demo)</h1>
+        <h1 class="text-5xl">BreadWinner</h1>
         <p class="text-xl">Our bread-and-butter are loafs.</p>
+        <i class="">Version: alpha 1.0.0</i>
     </aside>
 
     <!-- Button for testing push notifications on mobile -->
