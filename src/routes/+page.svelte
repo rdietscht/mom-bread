@@ -10,10 +10,7 @@
     // UPDATE THIS WHENEVER A NEW BREAD TYPE IS ADDED.
     const IMPLEMENTED_TYPES: string[] = [
         'sandwich',
-        'sourdough',
-        'wheat',
-        'fruitcake',
-        'honeywheat'
+        'COMING SOON'
     ]
 
     function updateBaseIndex(forward_flag: boolean)
