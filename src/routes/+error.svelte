@@ -13,7 +13,7 @@
         alt="person watching burnt bread"
     />
 
-    <p class="my-2 text-sm">Please contact <a href="mailto:rdietscht@gmail.com">rdietscht@gmail.com</a> and kindly pass along the following information:</p>
+    <p class="my-2 text-sm text-center">Please contact <a href="mailto:rdietscht@gmail.com">rdietscht@gmail.com</a> and kindly pass along the following information:</p>
 
     <code class="p-2 text-sm bg-stone-200">
         <b>Error Message:</b> {page.error?.message}
