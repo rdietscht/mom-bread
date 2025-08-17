@@ -53,12 +53,22 @@
     <!-- Display the name of the bread type -->
     <h1 class="text-4xl text-center text-red-900 py-4">{btype[0].toUpperCase() + btype.slice(1)} Bread</h1>
 
-    <!-- Carousel area for showing steps -->
+    <!-- Card area for showing steps -->
     <div class="h-2/3">
         <h2 class="h-1/9 text-2xl text-center">Current Step:</h2>
         <div class="w-full h-8/9">
             {@render breadstep(steps[currentStep])}
         </div>
+    </div>
+
+    <!-- Return home button -->
+    <div class="w-full h-1/4 relative">
+        <a
+            href="/"
+            class="absolute top-3 right-3 bg-orange-300 border-2 rounded-sm p-2 transition active:scale-115"
+        >
+            Return to Home
+        </a>
     </div>
 
     <!-- Primary UI for interaction with progress page -->

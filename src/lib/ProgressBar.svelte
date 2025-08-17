@@ -2,7 +2,7 @@
 
     // The max number of steps to render + the current step highlighted.
     let { stepCount, currentStep }: { stepCount: number, currentStep: number } = $props();
-    $inspect(stepCount);
+    // $inspect(stepCount); // DEBUGGING!
 
     const MAX_COUNT: number = 8; // changes the maximum number of steps rendered
     const STEP_VALUE: number = MAX_COUNT / stepCount; // the value of each step, used to progress bar when stepCount > MAX_COUNT
