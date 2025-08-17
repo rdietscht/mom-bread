@@ -73,7 +73,7 @@
     <aside class="text-red-900 p-2">
         <h1 class="text-5xl">BreadWinner</h1>
         <p class="text-xl">Our bread-and-butter are loafs.</p>
-        <i class="">Version: alpha 1.0.0</i>
+        <i class="">Version: alpha 1.0.1</i>
     </aside>
 
     <!-- Button for testing push notifications on mobile -->
