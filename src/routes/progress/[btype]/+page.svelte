@@ -2,6 +2,7 @@
     import { type BreadStep_T } from '$lib';
     import BreadTimer from '$lib/BreadTimer.svelte';
     import ProgressBar from '$lib/ProgressBar.svelte';
+    import { getCurrentStep, getCurrentType, setCurrentStep, setCurrentType } from '$lib/session.svelte';
     import type { PageProps } from '../../$types';
 
     // Retrieve fetched page data.
@@ -15,14 +16,34 @@
     let showGUI: boolean = $state(true);
     let currentStep: number = $state(0);
 
+    // EFFECT UPDATES
+    $effect(() => {
+
+        // Check if there is an ongoing session.
+        if (getCurrentType() == btype)
+        {
+            // Use the previously viewed step to configure the view.
+            currentStep = getCurrentStep();
+
+        } else
+        {
+            // Initialize a new session.
+            setCurrentType(btype);
+            setCurrentStep(0);
+        }
+
+    });
+
     // HELPERS
     function stepBack()
     {
         currentStep = currentStep - 1 < 0 ? 0 : currentStep - 1;
+        setCurrentStep(currentStep);
     }
     function stepForward()
     {
         currentStep = currentStep + 1 >= steps.length ? steps.length - 1 : currentStep + 1;
+        setCurrentStep(currentStep);
     }
 
 </script>

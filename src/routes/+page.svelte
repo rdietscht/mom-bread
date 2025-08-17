@@ -11,7 +11,7 @@
     const IMPLEMENTED_TYPES: string[] = [
         'sandwich',
         'COMING SOON'
-    ]
+    ];
 
     function updateBaseIndex(forward_flag: boolean)
     {
@@ -92,7 +92,7 @@
                 <!-- The user has saved session state -->
                 <a
                     class="utility-button"
-                    href="/progress/sandwich"
+                    href={`/progress/${getCurrentType()}`}
                 >
                     View Progress
                 </a>
@@ -120,6 +120,7 @@
         </div>
     </div>
 
+    <!-- POPUP WINDOW: BREAD SELECTION -->
     {#if displayBreadOptions}
         <div class="fixed top-0 left-0 bg-stone-700/40 w-screen h-screen">
             <div class="relative border-2 w-fit m-auto top-1/2 -translate-y-1/2 px-1 py-2 bg-stone-200 rounded-md">
