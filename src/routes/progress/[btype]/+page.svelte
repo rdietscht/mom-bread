@@ -39,7 +39,7 @@
             />
         </div>
         <div class="px-2 h-1/2 text-lg">
-            <div class="h-1/6 flex flex-row items-center">{step.title}</div> 
+            <div class="h-fit py-2 mb-2 flex flex-row items-center">{step.title}</div> 
             <div class="text-sm py-1 px-2 h-fit max-h-5/6 overflow-y-auto bg-orange-200 rounded-sm inset-shadow-sm">
                 {step.desc}
             </div>
