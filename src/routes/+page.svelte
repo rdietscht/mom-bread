@@ -85,9 +85,6 @@
         <h1 class="text-center text-2xl text-red-900 py-1">What are you looking for?</h1>
         <div class="flex flex-col items-center py-2">
 
-            <!-- TODO: CHANGE THIS URL TO A PAGE THAT REROUTES YOU
-             TO A NEW SELECTION PAGE OR A RESUME SESSION PAGE IF THE
-             USER IS CURRENTLY TRACKING BREAD -->
             {#if getCurrentType()}
                 <!-- The user has saved session state -->
                 <a
@@ -96,14 +93,14 @@
                 >
                     View Progress
                 </a>
-            {:else}
-                <button
-                    class="utility-button"
-                    onclick={() => { displayBreadOptions = true; }}
-                >
-                    Track Bread Progress
-                </button>
             {/if}
+
+            <button
+                class="utility-button"
+                onclick={() => { displayBreadOptions = true; }}
+            >
+                Track New Bread Progress
+            </button>
 
             <a
                 class="utility-button"
