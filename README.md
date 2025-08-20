@@ -9,12 +9,14 @@ To begin, a user only needs to specify which style of bread they are creating an
 
 Below are a list of targeted goals for features I want to add in the future. These range from minor improvements to major feature additions. If you have any comments on these or have an idea, feel free to message me/fork this repo and I would be happy to see it.
 
+* **Push notifications for timer completion events (iOS)**
+* **Ahead-of-time warnings for timer completion events (around 15-30 mins. before)**
 * **Continuous timer updates across pages**
 * **Add your own recipes via a custom recipe book**
 * **View read-only recipe details from the main menu**
 * *More bread recipes*
 * *View recipe details while tracing bread progress*
-* *More cartoon graphics for steps* 
+* *More cartoon graphics for steps*
 
 ## Dev notes:
 
